@@ -8,7 +8,7 @@ function generateRandomChord() {
   chord = chords[Math.floor(Math.random() * chords.length)];
   string = strings[Math.floor(Math.random() * strings.length)];
   inversion = inversions[Math.floor(Math.random() * inversions.length)];
-  return root + chord + " " + string + " " + inversion;
+  return root + chord + " " + inversion + " " + string;
 }
 
 function updateRandomChordDisplay() {
