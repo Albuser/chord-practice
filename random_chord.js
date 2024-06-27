@@ -22,7 +22,7 @@ function generateRandomChord() {
   chord = chords[Math.floor(Math.random() * chords.length)];
   string = strings[Math.floor(Math.random() * strings.length)];
   inversion = inversions[Math.floor(Math.random() * inversions.length)];
-  return root + " " + chord + " " + root + " " + inversion;
+  return root + " " + chord + " " + string + " " + inversion;
 }
 
 // Function to update the random string display every 2 seconds
