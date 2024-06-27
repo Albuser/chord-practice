@@ -42,6 +42,7 @@ body {
   color: white;
   border-color: #222;
   border-style: solid;
+  -webkit-appearance: none;
 }
 
 #nextChordButton {

@@ -1,27 +1,14 @@
-roots = [
-  "A",
-  "A Flat",
-  "B",
-  "B Flat",
-  "C",
-  "D",
-  "D Flat",
-  "E",
-  "E Flat",
-  "F",
-  "G",
-  "G Flat",
-];
-chords = ["min7", "maj7", "7"];
+roots = ["A", "A♭", "B", "B♭", "C", "D", "D♭", "E", "E♭", "F", "G", "G♭"];
+chords = ["m7", "△7", "7"];
 strings = ["Root 5", "Root 6"];
-inversions = ["", "first inversion", "second inversion", "third inversion"];
+inversions = ["", "I", "II", "III"];
 
 function generateRandomChord() {
   root = roots[Math.floor(Math.random() * roots.length)];
   chord = chords[Math.floor(Math.random() * chords.length)];
   string = strings[Math.floor(Math.random() * strings.length)];
   inversion = inversions[Math.floor(Math.random() * inversions.length)];
-  return root + " " + chord + " " + string + " " + inversion;
+  return root + chord + " " + string + " " + inversion;
 }
 
 function updateRandomChordDisplay() {
