@@ -1,20 +1,38 @@
 body {
-  background-color: #333; /* Dark background color */
-  color: #fff; /* Text color */
+  background-color: #333;
+  color: #fff;
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-#randomStringDisplay {
-  background-color: #555; /* Background color for the random string display */
-  padding: 20px; /* Padding around the random string */
+#randomChordDisplay {
+  background-color: #555;
+  color: white;
+  padding: 20px;
   text-align: center;
   font-size: 24px;
-  border-radius: 8px; /* Rounded corners for the display */
-  width: 300px; /* Adjust width as needed */
+  border-radius: 8px;
+  width: 600px;
+}
+
+#timerContainer {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  display: flex;
+  justify-content: row;
+}
+
+#timerContainer > * {
+  margin: 30px 30px;
+  padding: 20px;
+  text-align: left;
+  font-size: 24px;
 }

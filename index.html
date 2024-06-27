@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Chord Generator</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="random_chord.js"></script>
   </head>
   <body>
-    <div id="randomStringDisplay"></div>
+    <div id="timerContainer">
+        <label for="timer">Seconds Between Chords</label>
+        <input type="number" id="timer" value="5" min="0.25" max="30"></input>
+    </div>
+    <div id="randomChordDisplay"></div>
   </body>
 </html>

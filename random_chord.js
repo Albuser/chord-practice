@@ -16,7 +16,6 @@ chords = ["min7", "maj7", "7"];
 strings = ["Root 5", "Root 6"];
 inversions = ["", "first inversion", "second inversion", "third inversion"];
 
-// Function to generate a random string of specified length
 function generateRandomChord() {
   root = roots[Math.floor(Math.random() * roots.length)];
   chord = chords[Math.floor(Math.random() * chords.length)];
@@ -25,15 +24,17 @@ function generateRandomChord() {
   return root + " " + chord + " " + string + " " + inversion;
 }
 
-// Function to update the random string display every 2 seconds
 function updateRandomChordDisplay() {
-  const randomStringDisplay = document.getElementById("randomStringDisplay");
-  setInterval(function () {
-    randomStringDisplay.innerText = generateRandomChord(10); // Change 10 to your desired string length
-  }, 2000); // 2000 milliseconds = 2 seconds
+  const randomChordDisplay = document.getElementById("randomChordDisplay");
+  const interval = document.getElementById("timer");
+  const timeBetween = Math.max(250, parseFloat(interval.value) * 1000);
+  function update() {
+    randomChordDisplay.innerText = generateRandomChord();
+    setTimeout(update, parseInt(interval.value) * 1000); // Update every specified seconds
+  }
+  update();
 }
 
-// Call the function when the page loads
 window.onload = function () {
   updateRandomChordDisplay();
 };
