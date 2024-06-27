@@ -1,0 +1,20 @@
+body {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Text color */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#randomStringDisplay {
+  background-color: #555; /* Background color for the random string display */
+  padding: 20px; /* Padding around the random string */
+  text-align: center;
+  font-size: 24px;
+  border-radius: 8px; /* Rounded corners for the display */
+  width: 300px; /* Adjust width as needed */
+}
