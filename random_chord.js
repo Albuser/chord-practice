@@ -27,12 +27,28 @@ function generateRandomChord() {
 function updateRandomChordDisplay() {
   const randomChordDisplay = document.getElementById("randomChordDisplay");
   const interval = document.getElementById("timer");
-  const timeBetween = Math.max(250, parseFloat(interval.value) * 1000);
+  const intervalInput = document.getElementById("timer");
   function update() {
     randomChordDisplay.innerText = generateRandomChord();
-    setTimeout(update, parseInt(interval.value) * 1000); // Update every specified seconds
+    randomChordDisplay.classList.add("flash");
+    setTimeout(() => {
+      randomChordDisplay.classList.remove("flash");
+    }, 200);
+    timeoutId = setTimeout(update, parseInt(interval.value) * 1000);
   }
+
+  intervalInput.addEventListener("input", function () {
+    clearTimeout(timeoutId); // Clear the current timeout
+    update(); // Restart update with the new interval
+  });
+
   update();
+
+  const nextChordButton = document.getElementById("nextChordButton");
+  nextChordButton.addEventListener("click", function () {
+    clearTimeout(timeoutId); // Stop the current timeout
+    update(); // Update immediately
+  });
 }
 
 window.onload = function () {
